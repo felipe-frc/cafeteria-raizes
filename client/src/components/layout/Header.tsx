@@ -1,3 +1,4 @@
+import { ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navigationItems = [
@@ -7,10 +8,15 @@ const navigationItems = [
   { label: "Contato", href: "#contato" },
 ];
 
-export function Header() {
+type HeaderProps = {
+  cartItemsCount: number;
+  onCartOpen: () => void;
+};
+
+export function Header({ cartItemsCount, onCartOpen }: HeaderProps) {
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-stone-950/90 backdrop-blur-xl">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4">
         <a href="#inicio" className="flex items-center gap-3 transition-opacity hover:opacity-80">
           <img
             src="/images/logo-cafeteria.png"
@@ -31,13 +37,32 @@ export function Header() {
           ))}
         </div>
 
-        <Button
-          asChild
-          size="sm"
-          className="rounded-2xl px-6 py-3 font-semibold uppercase tracking-widest !text-white shadow-lg shadow-amber-950/20 hover:bg-amber-800 hover:!text-white hover:shadow-amber-700/30"
-        >
-          <a href="#contato" aria-label="Reservar mesa">RESERVAR</a>
-        </Button>
+        <div className="flex items-center gap-3">
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            onClick={onCartOpen}
+            className="relative rounded-2xl px-4 py-3 !text-white hover:!text-white"
+            aria-label={`Abrir carrinho com ${cartItemsCount} item(ns)`}
+          >
+            <ShoppingBag className="size-4" />
+            <span className="hidden sm:inline">Pedido</span>
+            {cartItemsCount > 0 && (
+              <span className="absolute -right-2 -top-2 flex size-6 items-center justify-center rounded-full bg-amber-600 text-xs font-bold text-white shadow-lg">
+                {cartItemsCount}
+              </span>
+            )}
+          </Button>
+
+          <Button
+            asChild
+            size="sm"
+            className="hidden rounded-2xl px-6 py-3 font-semibold uppercase tracking-widest !text-white shadow-lg shadow-amber-950/20 hover:bg-amber-800 hover:!text-white hover:shadow-amber-700/30 sm:inline-flex"
+          >
+            <a href="#menu" aria-label="Ver menu para fazer pedido">PEDIR</a>
+          </Button>
+        </div>
       </nav>
     </header>
   );
