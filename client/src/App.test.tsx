@@ -6,8 +6,20 @@ describe("App", () => {
   it("renderiza a página principal da cafeteria", () => {
     render(<App />);
 
-    expect(screen.getByText(/Cafeteria Colonial/i)).toBeInTheDocument();
-    expect(screen.getByText(/Nosso Menu/i)).toBeInTheDocument();
-    expect(screen.getByText(/Visite-nos/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /nosso menu/i }),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("heading", { name: /nos encontre/i }),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("button", { name: /bebidas/i }),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("button", { name: /quitandas/i }),
+    ).toBeInTheDocument();
   });
 });
