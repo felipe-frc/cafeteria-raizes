@@ -1,67 +1,168 @@
-# ☕ Cafeteria Raízes - Sabor e Tradição
+# ☕ Cafeteria Raízes
 
-Aplicação web institucional para a Cafeteria Raízes, com design colonial mineiro, cardápio interativo, avaliações de clientes e localização integrada. O projeto foi limpo e reorganizado para funcionar como uma landing page moderna, leve e sem dependências geradas por ferramentas externas.
+Aplicação web institucional desenvolvida para uma cafeteria de identidade colonial, com foco em **interface sofisticada**, **experiência do usuário**, **cardápio interativo**, **avaliações de clientes**, **localização integrada** e **deploy em produção com Vercel**.
 
-## 🌐 Acesse o Projeto
+O projeto foi desenvolvido com **React**, **TypeScript**, **Vite** e **Tailwind CSS**, utilizando uma estrutura limpa, componentizada e organizada para portfólio profissional.
 
-👉 https://cafeteria-colonial-livid.vercel.app/
+A aplicação apresenta uma landing page responsiva para a **Cafeteria Raízes**, valorizando tradição, acolhimento, estética artesanal e navegação simples para o usuário final.
 
-## 📌 Objetivo do Projeto
+---
 
-Este projeto foi desenvolvido com o objetivo de praticar e demonstrar habilidades em desenvolvimento front-end moderno, incluindo:
+## Acesse o Projeto
 
-- construção de interfaces sofisticadas e responsivas com design colonial;
-- desenvolvimento com React 19 e TypeScript;
-- organização de componentes por responsabilidade;
-- separação entre dados, layout e seções da página;
-- estilização com Tailwind CSS 4;
-- integração de imagens, vídeo e mapa;
-- foco em UX/UI aplicado a negócios reais;
-- estrutura limpa para manutenção e evolução futura.
+**Deploy:** [Cafeteria Raízes na Vercel](https://cafeteria-colonial-livid.vercel.app/)
 
-## 🚀 Funcionalidades
+**Repositório:** [github.com/felipe-frc/cafeteria-colonial](https://github.com/felipe-frc/cafeteria-colonial)
 
-- 🏛️ Design colonial sofisticado com paleta inspirada em café;
-- 📹 seção Sobre com vídeo institucional em destaque;
-- ☕ cardápio interativo com abas para Bebidas e Quitandas;
-- ⭐ avaliações de clientes com carrossel automático simples;
-- 📍 mapa integrado via Google Maps embed;
-- 🎯 header fixo com navegação por âncoras;
-- 📱 layout responsivo para desktop, tablet e mobile;
-- 🧹 estrutura limpa, sem código de ferramenta externa e sem arquivos gerados no repositório.
+> A aplicação está hospedada na Vercel como projeto front-end estático. O build de produção é gerado com Vite e publicado a partir da pasta `dist`.
 
-## 🛠️ Tecnologias Utilizadas
+Para executar localmente, siga as instruções da seção **Como Executar**.
 
-- React 19
-- TypeScript
-- Vite
-- Tailwind CSS 4
-- Lucide React
-- shadcn/ui somente para o componente Button
+---
 
-## 🏗️ Estrutura do Projeto
+## Objetivo do Projeto
 
-```text
+Este projeto foi desenvolvido com o objetivo de praticar e demonstrar conhecimentos em:
+
+- Desenvolvimento front-end moderno com React e TypeScript;
+- Construção de landing pages responsivas;
+- Organização de componentes por responsabilidade;
+- Separação entre layout, seções e dados estáticos;
+- Estilização com Tailwind CSS;
+- Integração de imagens, vídeo e mapa;
+- Criação de interface com identidade visual própria;
+- Aplicação de boas práticas de UX/UI;
+- Configuração de build e deploy com Vite e Vercel;
+- Limpeza estrutural de projeto e remoção de código morto;
+- Documentação técnica para portfólio profissional.
+
+---
+
+## ⭐ Destaques Técnicos
+
+- Projeto front-end puro com React, TypeScript, Vite e Tailwind CSS;
+- Estrutura organizada em componentes de layout, seções, dados e utilitários;
+- Header fixo com navegação por âncoras;
+- Hero section com identidade visual forte e chamada principal;
+- Seção institucional apresentando a essência da cafeteria;
+- Cardápio interativo dividido entre **Bebidas** e **Quitandas**;
+- Avaliações de clientes em formato visual;
+- Seção de localização com Google Maps incorporado;
+- Background interno com imagem temática aplicada de forma sutil;
+- Imagens e assets locais organizados no projeto;
+- SEO básico com meta tags no `index.html`;
+- Deploy configurado na Vercel com `vercel.json`;
+- Build de produção gerado com Vite;
+- Estrutura limpa, sem arquivos gerados, dependências desnecessárias ou código morto.
+
+---
+
+## Funcionalidades
+
+### Página Inicial
+
+- Apresentação visual da Cafeteria Raízes;
+- Imagem principal com identidade da marca;
+- Botão de chamada para reserva;
+- Navegação direta para as seções principais da página.
+
+### Nossa Essência
+
+- Seção institucional com apresentação da cafeteria;
+- Texto descritivo sobre tradição, acolhimento e experiência artesanal;
+- Indicadores visuais de anos de tradição, clientes felizes e qualidade;
+- Imagem temática para reforçar a identidade visual.
+
+### Menu
+
+- Cardápio dividido em categorias;
+- Alternância entre **Bebidas** e **Quitandas**;
+- Exibição de imagem, nome, descrição e preço dos produtos;
+- Layout em cards responsivos.
+
+### Avaliações
+
+- Depoimentos de clientes;
+- Exibição visual de estrelas;
+- Cards com nome do cliente e comentário;
+- Reforço de prova social para o negócio.
+
+### Localização e Contato
+
+- Informações de endereço;
+- Telefone;
+- E-mail;
+- Horários de funcionamento;
+- Mapa integrado com Google Maps;
+- Seção preparada para conversão e contato do usuário.
+
+---
+
+## ️ Tecnologias
+
+| Camada / Finalidade       | Tecnologia                     |
+| ------------------------- | ------------------------------ |
+| Linguagem                 | TypeScript                     |
+| Biblioteca de Interface   | React                          |
+| Build Tool                | Vite                           |
+| Estilização               | Tailwind CSS                   |
+| Ícones                    | Lucide React                   |
+| Componentização UI        | shadcn/ui — componente Button  |
+| Utilitários de classe     | clsx, tailwind-merge           |
+| Deploy                    | Vercel                         |
+| Versionamento             | Git / GitHub                   |
+| Formatação                | Prettier                       |
+
+---
+
+## ️ Arquitetura e Estrutura do Projeto
+
+O projeto utiliza uma estrutura simples e organizada para facilitar manutenção, evolução e leitura do código.
+
+```txt
 cafeteria-colonial/
 │
 ├── client/
 │   ├── public/
 │   │   ├── images/
 │   │   │   ├── menu/
-│   │   │   └── telas/
+│   │   │   ├── telas/
+│   │   │   ├── background-home.png
+│   │   │   ├── background-home.webp
+│   │   │   ├── cafeteria-identidade.png
+│   │   │   └── logo-cafeteria.png
+│   │   │
 │   │   └── video/
 │   │
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── layout/          # Header e Footer
-│   │   │   ├── sections/        # Seções principais da landing page
-│   │   │   └── ui/              # Componentes básicos reaproveitáveis
-│   │   ├── data/                # Dados do menu e avaliações
-│   │   ├── lib/                 # Funções utilitárias
-│   │   ├── pages/               # Página principal
+│   │   │   ├── layout/
+│   │   │   │   ├── Footer.tsx
+│   │   │   │   └── Header.tsx
+│   │   │   │
+│   │   │   ├── sections/
+│   │   │   │   ├── AboutSection.tsx
+│   │   │   │   ├── ContactSection.tsx
+│   │   │   │   ├── HeroSection.tsx
+│   │   │   │   ├── MenuSection.tsx
+│   │   │   │   └── ReviewsSection.tsx
+│   │   │   │
+│   │   │   └── ui/
+│   │   │       └── button.tsx
+│   │   │
+│   │   ├── data/
+│   │   │   ├── menuItems.ts
+│   │   │   └── reviews.ts
+│   │   │
+│   │   ├── lib/
+│   │   │   └── utils.ts
+│   │   │
+│   │   ├── pages/
+│   │   │   └── Home.tsx
+│   │   │
 │   │   ├── App.tsx
-│   │   ├── main.tsx
-│   │   └── index.css
+│   │   ├── index.css
+│   │   └── main.tsx
 │   │
 │   └── index.html
 │
@@ -70,167 +171,302 @@ cafeteria-colonial/
 ├── package-lock.json
 ├── tsconfig.json
 ├── tsconfig.node.json
+├── vercel.json
 ├── vite.config.ts
 ├── LICENSE
 └── README.md
 ```
 
-## ⚙️ Organização da Aplicação
+---
 
-A aplicação foi reorganizada para reduzir acoplamento e facilitar manutenção:
+## Interface do Sistema
 
-- `components/layout`: componentes estruturais, como Header e Footer;
-- `components/sections`: seções da página, como Hero, Sobre, Menu, Avaliações e Contato;
-- `components/ui`: componentes de interface realmente utilizados;
-- `data`: conteúdo estático separado dos componentes visuais;
-- `pages`: montagem da página principal;
-- `lib`: utilitários compartilhados.
+### Interface Completa
 
-## ⭐ Diferenciais Técnicos
+Visão geral da landing page com hero, seção institucional, menu, avaliações e localização.
 
-- Remoção completa de códigos, plugins, rotas e arquivos gerados por ferramenta externa;
-- Remoção de `server`, `shared`, `.webdev`, `dist`, `node_modules` e arquivos não utilizados;
-- Simplificação do Vite para um projeto front-end puro;
-- Redução de dependências para manter somente o necessário;
-- Componentização da Home em seções menores;
-- Dados do cardápio e avaliações separados da UI;
-- Meta tags de SEO e Open Graph adicionadas no `index.html`;
-- Imagens do menu com `width` e `height` definidos para reduzir layout shift.
+![Interface completa da Cafeteria Raízes](client/public/images/telas/interface.png)
 
-## 📸 Interface do Sistema
+---
 
-### 📱 Interface Completa
+### Página Inicial
 
-<p align="center">
-  <img src="client/public/images/telas/interface.png" width="800" alt="Interface completa da Cafeteria Raízes">
-</p>
+Hero section com identidade visual da cafeteria, navegação superior e chamada para reserva.
 
-### 🏠 Página Inicial - Hero Section
+![Página inicial da Cafeteria Raízes](client/public/images/telas/home.png)
 
-<p align="center">
-  <img src="client/public/images/telas/home.png" width="800" alt="Hero section da Cafeteria Raízes">
-</p>
+---
 
-### ☕ Seção Sobre
+### Nossa Essência
 
-<p align="center">
-  <img src="client/public/images/telas/sobre.png" width="800" alt="Seção sobre da Cafeteria Raízes">
-</p>
+Seção institucional com apresentação da tradição, proposta visual e indicadores da cafeteria.
 
-### 🍵 Menu - Bebidas
+![Seção Nossa Essência](client/public/images/telas/sobre.png)
 
-<p align="center">
-  <img src="client/public/images/telas/menu-bebidas.png" width="800" alt="Menu de bebidas da Cafeteria Raízes">
-</p>
+---
 
-### 🥐 Menu - Quitandas
+### Menu — Bebidas
 
-<p align="center">
-  <img src="client/public/images/telas/menu-quitandas.png" width="800" alt="Menu de quitandas da Cafeteria Raízes">
-</p>
+Cardápio de bebidas com imagens, descrições e preços.
 
-### ⭐ Avaliações
+![Menu de bebidas](client/public/images/telas/menu-bebidas.png)
 
-<p align="center">
-  <img src="client/public/images/telas/avaliacoes.png" width="800" alt="Avaliações da Cafeteria Raízes">
-</p>
+---
 
-### 📍 Localização
+### Menu — Quitandas
 
-<p align="center">
-  <img src="client/public/images/telas/nos-visite.png" width="800" alt="Localização da Cafeteria Raízes">
-</p>
+Cardápio de quitandas com produtos visuais e organização por categoria.
 
-## ▶️ Como Executar o Projeto
+![Menu de quitandas](client/public/images/telas/menu-quitandas.png)
 
-### 1. Clonar o repositório
+---
+
+### Avaliações
+
+Depoimentos de clientes em cards com avaliação visual.
+
+![Avaliações de clientes](client/public/images/telas/avaliacoes.png)
+
+---
+
+### Visite-nos
+
+Seção com endereço, telefone, e-mail, horários e mapa incorporado.
+
+![Seção Visite-nos](client/public/images/telas/nos-visite.png)
+
+---
+
+## ⚙️ Como Executar
+
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/)
+- [Git](https://git-scm.com/)
+- Editor de código, como [VS Code](https://code.visualstudio.com/)
+
+---
+
+### 1. Clone o repositório
 
 ```bash
 git clone https://github.com/felipe-frc/cafeteria-colonial.git
 ```
 
-### 2. Acessar a pasta do projeto
+---
+
+### 2. Acesse a pasta do projeto
 
 ```bash
 cd cafeteria-colonial
 ```
 
-### 3. Instalar dependências
+---
+
+### 3. Instale as dependências
 
 ```bash
 npm install
 ```
 
-### 4. Executar em desenvolvimento
+---
+
+### 4. Execute em ambiente de desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-### 5. Validar TypeScript
+Acesse no navegador:
+
+```txt
+http://localhost:5173
+```
+
+---
+
+### 5. Valide o TypeScript
 
 ```bash
 npm run check
 ```
 
-### 6. Gerar build de produção
+---
+
+### 6. Gere o build de produção
 
 ```bash
 npm run build
 ```
 
-### 7. Visualizar build localmente
+O Vite irá gerar a pasta:
+
+```txt
+dist/
+```
+
+---
+
+### 7. Visualize o build localmente
 
 ```bash
 npm run preview
 ```
 
-## ⚠️ Observações
+---
 
-- O mapa usa embed público do Google Maps, sem necessidade de chave de API;
-- As imagens e o vídeo estão dentro de `client/public`;
-- A pasta `dist` é gerada automaticamente pelo Vite e não deve ser versionada;
-- A pasta `node_modules` não deve ser enviada para o GitHub;
-- O projeto foi simplificado para funcionar como front-end estático na Vercel.
+## ✅ Qualidade e Organização
 
-## 🧠 Decisões de Desenvolvimento
+O projeto passou por uma limpeza estrutural para manter apenas arquivos, dependências e componentes realmente necessários.
 
-Durante a limpeza estrutural, foram adotadas as seguintes decisões:
+Entre as melhorias aplicadas estão:
 
-- Manter o projeto como landing page front-end pura;
-- Remover servidor Express porque não era necessário para o deploy estático;
-- Remover roteamento porque o projeto possui uma única página;
-- Remover componentes shadcn/ui não utilizados;
-- Remover dependências sem uso direto no código;
-- Separar conteúdo estático em arquivos de dados;
-- Priorizar uma estrutura simples, previsível e fácil de explicar em entrevista.
+- Remoção de arquivos gerados localmente;
+- Remoção de pastas desnecessárias para o funcionamento da aplicação;
+- Simplificação da estrutura para front-end estático;
+- Organização da Home em componentes menores;
+- Separação dos dados do cardápio e avaliações;
+- Redução de dependências não utilizadas;
+- Configuração de deploy com `vercel.json`;
+- Padronização dos scripts no `package.json`;
+- Atualização da documentação do projeto.
 
-## 📈 Melhorias Futuras
+Scripts disponíveis:
 
-- 📧 Formulário de contato funcional;
-- 🖼️ Galeria de fotos do ambiente e produtos;
-- 📅 Sistema de reservas com calendário;
-- 🔔 Newsletter e notificações por email;
-- 📊 Painel administrativo para gerenciar cardápio;
-- 🌙 Alternância entre tema claro/escuro;
-- 📱 Versão mobile/app nativo;
-- 🧪 Testes automatizados com Vitest e Testing Library.
+| Comando           | Descrição                                      |
+| ----------------- | ---------------------------------------------- |
+| `npm run dev`     | Executa o projeto em ambiente de desenvolvimento |
+| `npm run build`   | Gera o build de produção com Vite              |
+| `npm run preview` | Visualiza localmente o build gerado            |
+| `npm run check`   | Executa verificação TypeScript                 |
+| `npm run format`  | Formata os arquivos com Prettier               |
 
-## 📦 Release Recomendada
+---
 
-```text
-v2.1.0 - Limpeza estrutural e organização do projeto
-```
+## Decisões de Desenvolvimento
 
-Resumo da release:
+### Projeto front-end estático
 
-- remoção completa de código de ferramenta externa;
-- limpeza de arquivos gerados e pastas desnecessárias;
-- simplificação do Vite, scripts e dependências;
-- organização da Home em componentes menores;
-- separação dos dados do menu e avaliações;
-- atualização do README para refletir a nova estrutura.
+A aplicação foi mantida como front-end puro, sem backend próprio, porque o objetivo do projeto é apresentar uma landing page institucional com foco em interface, responsividade e experiência visual.
 
-## 📄 Licença
+Essa decisão simplifica o deploy, reduz complexidade e torna o projeto mais direto para avaliação em portfólio.
 
-Este projeto está licenciado sob a licença MIT.
+### Componentização por responsabilidade
+
+A interface foi separada em componentes de layout e seções principais.
+
+Essa organização evita que toda a página fique concentrada em um único arquivo e facilita futuras melhorias, como adicionar novas seções, alterar o cardápio ou modificar blocos visuais isoladamente.
+
+### Separação de dados e interface
+
+Os dados do menu e das avaliações ficam separados da estrutura visual.
+
+Isso torna o código mais limpo, melhora a manutenção e permite atualizar produtos ou depoimentos sem alterar diretamente os componentes principais da interface.
+
+### Tailwind CSS para estilização
+
+O Tailwind CSS foi utilizado para construir uma interface responsiva e consistente, com controle direto sobre espaçamentos, cores, tipografia e comportamento visual.
+
+### Vercel como plataforma de deploy
+
+A Vercel foi escolhida por ser adequada para aplicações front-end modernas com Vite, oferecendo build automático a cada push na branch principal.
+
+O arquivo `vercel.json` define o diretório de saída como `dist`, garantindo que o deploy utilize corretamente o build gerado pelo Vite.
+
+---
+
+## Releases
+
+### [v2.1.0 — Limpeza estrutural e melhorias de layout](https://github.com/felipe-frc/cafeteria-colonial/releases/tag/v2.1.0)
+
+Versão focada na limpeza estrutural do projeto, remoção de arquivos desnecessários, organização da base de código e refinamentos visuais após a reestruturação da landing page.
+
+Principais melhorias:
+
+- Reorganização da estrutura do projeto;
+- Remoção de arquivos gerados e pastas desnecessárias;
+- Simplificação da aplicação como front-end React + Vite;
+- Remoção de código morto e dependências não utilizadas;
+- Separação da interface em componentes de layout, seções e dados;
+- Aplicação do background `background-home` nas seções internas;
+- Correção visual da seção **Nossa Essência**;
+- Ajuste de contraste no botão **Reservar**;
+- Correção da configuração de deploy na Vercel;
+- Adição do arquivo `vercel.json`;
+- Atualização da documentação do projeto.
+
+### [v2.0.0 — Rebranding e Reestruturação](https://github.com/felipe-frc/cafeteria-colonial/releases/tag/v2.0.0)
+
+Nova versão principal do projeto, com reformulação visual e estrutural da landing page da cafeteria.
+
+Principais melhorias:
+
+- Reformulação significativa da interface;
+- Reorganização da estrutura do projeto;
+- Atualização da identidade visual;
+- Substituição de assets externos por arquivos locais;
+- Cardápio interativo com categorias;
+- Seção institucional;
+- Avaliações de clientes;
+- Mapa integrado na seção de contato;
+- Favicon com a logo do projeto;
+- Revisão do README e organização do repositório.
+
+### [v1.0.1 — Atualização de estabilidade e documentação](https://github.com/felipe-frc/cafeteria-colonial/releases/tag/v.1.0.1)
+
+Atualização do projeto com foco em estabilidade, organização e melhoria da documentação.
+
+Principais melhorias:
+
+- Correção da estrutura inicial do projeto;
+- Ajustes nas configurações de build;
+- Estabilização de dependências;
+- Melhoria na organização do código;
+- Atualização do README;
+- Preparação do projeto para deploy e evolução contínua.
+
+> Observação: esta versão utilizou a tag `v.1.0.1`. Nas próximas versões, o padrão recomendado é manter tags no formato `v1.0.1`, sem ponto após o `v`.
+
+### [v1.0.0 — Primeira versão estável](https://github.com/felipe-frc/cafeteria-colonial/releases/tag/v1.0.0)
+
+Primeira versão oficial do projeto Cafeteria Colonial.
+
+Principais entregas:
+
+- Layout institucional completo da cafeteria;
+- Hero section com identidade visual;
+- Proposta visual colonial sofisticada;
+- Menu dividido entre bebidas e alimentos;
+- Seção de avaliações;
+- Seção de localização com mapa incorporado;
+- Footer com informações de contato;
+- Organização inicial do projeto para portfólio.
+
+---
+
+## Melhorias Futuras
+
+- Formulário de contato funcional;
+- Integração real com WhatsApp para reservas;
+- Galeria de fotos do ambiente e produtos;
+- Sistema de reservas com calendário;
+- Newsletter para clientes;
+- Testes automatizados com Vitest e Testing Library;
+- Animações sutis entre seções;
+- Melhorias de acessibilidade;
+- Domínio personalizado;
+- Área administrativa para gerenciar o cardápio.
+
+---
+
+## Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## ‍ Autor
+
+**Marcos Felipe França**
+
+[LinkedIn](https://www.linkedin.com/in/marcosfelipefrc) · [GitHub](https://github.com/felipe-frc)
