@@ -1,5 +1,13 @@
 # ☕ Cafeteria Colonial
 
+![Frontend CI](https://github.com/felipe-frc/cafeteria-colonial/actions/workflows/frontend-ci.yml/badge.svg)
+![Vercel](https://img.shields.io/badge/deploy-Vercel-black?logo=vercel)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?logo=tailwindcss&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 Aplicação web desenvolvida para uma cafeteria de identidade colonial, com foco em **interface sofisticada**, **cardápio interativo**, **carrinho de pedidos**, **integração com WhatsApp**, **experiência do usuário**, **responsividade**, **organização de código** e **deploy em produção com Vercel**.
 
 O projeto foi desenvolvido com **React**, **TypeScript**, **Vite** e **Tailwind CSS**, utilizando uma estrutura limpa, componentizada e preparada para evolução.
@@ -63,9 +71,9 @@ Este projeto foi desenvolvido com o objetivo de praticar e demonstrar conhecimen
 
 ---
 
-## Funcionalidades
+## 🧩 Funcionalidades
 
-### Página Inicial
+### 🏠 Página Inicial
 
 - Apresentação visual da Cafeteria Raízes;
 - Imagem principal com identidade da marca;
@@ -73,14 +81,14 @@ Este projeto foi desenvolvido com o objetivo de praticar e demonstrar conhecimen
 - Navegação direta para as seções principais da página;
 - Header fixo com acesso ao carrinho.
 
-### Nossa Essência
+### ☕ Nossa Essência
 
 - Seção institucional com apresentação da cafeteria;
 - Texto descritivo sobre tradição, acolhimento e experiência artesanal;
 - Indicadores visuais de anos de tradição, clientes felizes e qualidade;
 - Imagem temática para reforçar a identidade visual.
 
-### Menu
+### 🍵 Menu
 
 - Cardápio dividido em categorias;
 - Alternância entre **Bebidas** e **Quitandas**;
@@ -89,7 +97,7 @@ Este projeto foi desenvolvido com o objetivo de praticar e demonstrar conhecimen
 - Botão **Adicionar** em cada produto;
 - Hover visual nos cards para reforçar a ação de pedido.
 
-### Carrinho de Pedidos
+### 🛒 Carrinho de Pedidos
 
 - Adição de produtos ao carrinho;
 - Abertura automática do carrinho após adicionar item;
@@ -100,7 +108,7 @@ Este projeto foi desenvolvido com o objetivo de praticar e demonstrar conhecimen
 - Cálculo automático do total;
 - Visualização resumida do pedido antes do envio.
 
-### Integração com WhatsApp
+### 📲 Integração com WhatsApp
 
 - Geração automática da mensagem do pedido;
 - Inclusão de produtos, quantidades, valores e total;
@@ -108,14 +116,14 @@ Este projeto foi desenvolvido com o objetivo de praticar e demonstrar conhecimen
 - Fluxo pensado para retirada no local;
 - Experiência simples e compatível com pequenos negócios.
 
-### Depoimentos
+### ⭐ Depoimentos
 
 - Depoimentos de clientes;
 - Exibição visual de estrelas;
 - Cards com nome do cliente e comentário;
 - Reforço de prova social para o negócio.
 
-### Localização e Contato
+### 📍 Localização e Contato
 
 - Informações de endereço;
 - Telefone;
@@ -126,25 +134,25 @@ Este projeto foi desenvolvido com o objetivo de praticar e demonstrar conhecimen
 
 ---
 
-## ️ Tecnologias
+## 🛠️ Tecnologias
 
-| Camada / Finalidade       | Tecnologia                    |
-| ------------------------- | ----------------------------- |
-| Linguagem                 | TypeScript                    |
-| Biblioteca de Interface   | React                         |
-| Build Tool                | Vite                          |
-| Estilização               | Tailwind CSS                  |
-| Ícones                    | Lucide React                  |
-| Componentização UI        | shadcn/ui — componente Button |
-| Utilitários de classe     | clsx, tailwind-merge          |
-| Deploy                    | Vercel                        |
-| Configuração de Deploy    | vercel.json                   |
-| Versionamento             | Git / GitHub                  |
-| Formatação                | Prettier                      |
+| Camada / Finalidade     | Tecnologia                    |
+| ----------------------- | ----------------------------- |
+| Linguagem               | TypeScript                    |
+| Biblioteca de Interface | React                         |
+| Build Tool              | Vite                          |
+| Estilização             | Tailwind CSS                  |
+| Ícones                  | Lucide React                  |
+| Componentização UI      | shadcn/ui — componente Button |
+| Utilitários de classe   | clsx, tailwind-merge          |
+| Deploy                  | Vercel                        |
+| Configuração de Deploy  | vercel.json                   |
+| Versionamento           | Git / GitHub                  |
+| Formatação              | Prettier                      |
 
 ---
 
-## Arquitetura
+## 🧱 Arquitetura
 
 O projeto utiliza uma estrutura front-end organizada por responsabilidade, separando componentes visuais, dados estáticos, hooks, utilitários, assets públicos e configurações de build/deploy.
 
@@ -246,32 +254,32 @@ cafeteria-colonial/
 └── vite.config.ts
 ```
 
-### Organização das Pastas
+### 📂 Organização das Pastas
 
-| Caminho | Responsabilidade |
-| ------ | ---------------- |
-| `client/index.html` | Arquivo HTML principal usado pelo Vite |
-| `client/public/images` | Imagens públicas do projeto |
-| `client/public/images/menu` | Imagens dos produtos exibidos no cardápio |
-| `client/public/images/telas` | Prints utilizados na documentação do README |
-| `client/public/video` | Vídeo utilizado como recurso visual da aplicação |
+| Caminho                                   | Responsabilidade                                    |
+| ----------------------------------------- | --------------------------------------------------- |
+| `client/index.html`                       | Arquivo HTML principal usado pelo Vite              |
+| `client/public/images`                    | Imagens públicas do projeto                         |
+| `client/public/images/menu`               | Imagens dos produtos exibidos no cardápio           |
+| `client/public/images/telas`              | Prints utilizados na documentação do README         |
+| `client/public/video`                     | Vídeo utilizado como recurso visual da aplicação    |
 | `client/src/components/ErrorBoundary.tsx` | Componente de proteção contra erros de renderização |
-| `client/src/components/cart` | Componentes relacionados ao carrinho de pedidos |
-| `client/src/components/layout` | Componentes estruturais, como cabeçalho e rodapé |
-| `client/src/components/sections` | Seções principais da landing page |
-| `client/src/components/ui` | Componentes reutilizáveis de interface |
-| `client/src/data` | Dados estáticos de contato, menu e depoimentos |
-| `client/src/hooks` | Hooks personalizados, como a lógica do carrinho |
-| `client/src/lib` | Funções auxiliares compartilhadas |
-| `client/src/pages` | Páginas da aplicação |
-| `client/src/utils` | Utilitários para moeda e integração com WhatsApp |
-| `vercel.json` | Configuração de deploy na Vercel |
-| `vite.config.ts` | Configuração do Vite |
-| `tsconfig.json` | Configuração principal do TypeScript |
-| `tsconfig.node.json` | Configuração TypeScript para arquivos Node/Vite |
-| `components.json` | Configuração dos componentes de UI |
+| `client/src/components/cart`              | Componentes relacionados ao carrinho de pedidos     |
+| `client/src/components/layout`            | Componentes estruturais, como cabeçalho e rodapé    |
+| `client/src/components/sections`          | Seções principais da landing page                   |
+| `client/src/components/ui`                | Componentes reutilizáveis de interface              |
+| `client/src/data`                         | Dados estáticos de contato, menu e depoimentos      |
+| `client/src/hooks`                        | Hooks personalizados, como a lógica do carrinho     |
+| `client/src/lib`                          | Funções auxiliares compartilhadas                   |
+| `client/src/pages`                        | Páginas da aplicação                                |
+| `client/src/utils`                        | Utilitários para moeda e integração com WhatsApp    |
+| `vercel.json`                             | Configuração de deploy na Vercel                    |
+| `vite.config.ts`                          | Configuração do Vite                                |
+| `tsconfig.json`                           | Configuração principal do TypeScript                |
+| `tsconfig.node.json`                      | Configuração TypeScript para arquivos Node/Vite     |
+| `components.json`                         | Configuração dos componentes de UI                  |
 
-### Fluxo Principal da Aplicação
+### 🔄 Fluxo Principal da Aplicação
 
 ```txt
 main.tsx
@@ -290,7 +298,7 @@ Footer
 CartDrawer
 ```
 
-### Fluxo do Carrinho
+### 🛒 Fluxo do Carrinho
 
 ```txt
 MenuSection
@@ -308,7 +316,7 @@ whatsapp.ts
 Enviar pedido formatado pelo WhatsApp
 ```
 
-### Separação de Responsabilidades
+### 🧩 Separação de Responsabilidades
 
 - `MenuSection.tsx` exibe os produtos e aciona a adição ao carrinho;
 - `useCart.ts` centraliza a lógica de adicionar, remover, alterar quantidade, limpar carrinho e calcular totais;
@@ -320,7 +328,7 @@ Enviar pedido formatado pelo WhatsApp
 - `Home.tsx` organiza a composição geral da página;
 - `ErrorBoundary.tsx` adiciona uma camada de segurança para falhas inesperadas na renderização.
 
-### Observação sobre Arquivos Gerados
+### ⚠️ Observação sobre Arquivos Gerados
 
 As pastas abaixo não fazem parte da arquitetura versionada do projeto e não devem ser enviadas para o GitHub:
 
@@ -333,6 +341,7 @@ dist/
 - `node_modules/` é recriada com `npm install`;
 - `dist/` é recriada com `npm run build`;
 - `.git/` pertence ao controle interno do Git e não deve ser incluída em ZIPs do projeto.
+
 ---
 
 ## 📸 Interface do Sistema
@@ -403,7 +412,7 @@ Seção com endereço, telefone, e-mail, horários e mapa incorporado.
 
 ## ⚙️ Como Executar
 
-### Pré-requisitos
+### 📋 Pré-requisitos
 
 - [Node.js](https://nodejs.org/)
 - [Git](https://git-scm.com/)
@@ -668,8 +677,8 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-## ‍ Autor
+## 👨🏻‍💻 Autor
 
-**👨🏻‍💻 Marcos Felipe França**
+**Marcos Felipe França**
 
 [LinkedIn](https://www.linkedin.com/in/marcosfelipefrc) · [GitHub](https://github.com/felipe-frc)
