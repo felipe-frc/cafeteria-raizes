@@ -14,6 +14,9 @@ O projeto foi desenvolvido com **React**, **TypeScript**, **Vite** e **Tailwind 
 
 A aplicação apresenta uma landing page moderna para a **Cafeteria Raízes**, permitindo que o usuário visualize o menu, adicione produtos ao carrinho, controle quantidades e envie o pedido formatado diretamente pelo WhatsApp.
 
+> **Observação sobre a identidade do projeto:**  
+> O repositório utiliza o nome **Cafeteria Colonial** como nome do projeto, enquanto a interface apresenta a marca fictícia **Cafeteria Raízes**, criada para representar visualmente uma cafeteria artesanal com identidade própria.
+
 ---
 
 ## 🌐 Acesse o Projeto
