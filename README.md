@@ -48,6 +48,7 @@ Este projeto foi desenvolvido com o objetivo de praticar e demonstrar conhecimen
 - Aplicação de boas práticas de UX/UI;
 - Configuração de build e deploy com Vite e Vercel;
 - Limpeza estrutural de projeto e remoção de código morto;
+- Testes automatizados com Vitest e Testing Library;
 - Documentação técnica para portfólio profissional.
 
 ---
@@ -68,6 +69,8 @@ Este projeto foi desenvolvido com o objetivo de praticar e demonstrar conhecimen
 - Background interno com imagem temática aplicada de forma sutil;
 - Imagens e assets locais organizados no projeto;
 - SEO básico configurado no `index.html`;
+- Testes automatizados configurados com Vitest e Testing Library;
+- Pipeline de CI com GitHub Actions;
 - Deploy configurado na Vercel com `vercel.json`;
 - Build de produção gerado com Vite;
 - Estrutura limpa, sem arquivos gerados, dependências desnecessárias ou código morto.
@@ -148,9 +151,11 @@ Este projeto foi desenvolvido com o objetivo de praticar e demonstrar conhecimen
 | Ícones                  | Lucide React                  |
 | Componentização UI      | shadcn/ui — componente Button |
 | Utilitários de classe   | clsx, tailwind-merge          |
+| Testes                  | Vitest, Testing Library       |
 | Deploy                  | Vercel                        |
 | Configuração de Deploy  | vercel.json                   |
 | Versionamento           | Git / GitHub                  |
+| CI/CD                   | GitHub Actions                |
 | Formatação              | Prettier                      |
 
 ---
@@ -243,6 +248,10 @@ cafeteria-colonial/
 │           ├── currency.ts
 │           └── whatsapp.ts
 │
+├── .github/
+│   └── workflows/
+│       └── frontend-ci.yml
+│
 ├── .gitignore
 ├── .prettierignore
 ├── .prettierrc
@@ -276,6 +285,7 @@ cafeteria-colonial/
 | `client/src/lib`                          | Funções auxiliares compartilhadas                   |
 | `client/src/pages`                        | Páginas da aplicação                                |
 | `client/src/utils`                        | Utilitários para moeda e integração com WhatsApp    |
+| `.github/workflows/frontend-ci.yml`       | Pipeline de CI com validação, testes e build        |
 | `vercel.json`                             | Configuração de deploy na Vercel                    |
 | `vite.config.ts`                          | Configuração do Vite                                |
 | `tsconfig.json`                           | Configuração principal do TypeScript                |
@@ -469,7 +479,15 @@ npm run check
 
 ---
 
-### 6. Gere o build de produção
+### 6. Execute os testes automatizados
+
+```bash
+npm run test
+```
+
+---
+
+### 7. Gere o build de produção
 
 ```bash
 npm run build
@@ -483,7 +501,7 @@ dist/
 
 ---
 
-### 7. Visualize o build localmente
+### 8. Visualize o build localmente
 
 ```bash
 npm run preview
@@ -507,6 +525,8 @@ Entre as melhorias aplicadas estão:
 - Separação da geração de mensagem do WhatsApp em utilitário próprio;
 - Redução de dependências não utilizadas;
 - Configuração de deploy com `vercel.json`;
+- Configuração de testes automatizados com Vitest e Testing Library;
+- Configuração de CI com GitHub Actions;
 - Padronização dos scripts no `package.json`;
 - Atualização da documentação do projeto.
 
@@ -518,7 +538,36 @@ Scripts disponíveis:
 | `npm run build`   | Gera o build de produção com Vite                |
 | `npm run preview` | Visualiza localmente o build gerado              |
 | `npm run check`   | Executa verificação TypeScript                   |
+| `npm run test`    | Executa os testes automatizados                  |
 | `npm run format`  | Formata os arquivos com Prettier                 |
+
+---
+
+## 🧪 Testes Automatizados
+
+O projeto possui testes automatizados configurados com **Vitest** e **Testing Library**, reforçando a confiabilidade das principais partes da aplicação.
+
+Os testes ajudam a validar comportamentos importantes da interface e reduzem o risco de regressões durante futuras melhorias.
+
+Para executar os testes localmente:
+
+```bash
+npm run test
+```
+
+Além dos testes, o projeto também possui verificação TypeScript:
+
+```bash
+npm run check
+```
+
+E build de produção:
+
+```bash
+npm run build
+```
+
+Essas validações também são executadas no fluxo de CI do GitHub Actions.
 
 ---
 
@@ -559,6 +608,12 @@ Isso torna o código mais limpo, melhora a manutenção e permite atualizar prod
 A lógica do carrinho foi isolada em um hook dedicado, enquanto a formatação de moeda e a montagem do link do WhatsApp foram separadas em utilitários.
 
 Essa separação melhora a legibilidade, reduz duplicação e facilita futuras alterações.
+
+### Testes automatizados
+
+O projeto utiliza testes automatizados com Vitest e Testing Library para validar comportamentos importantes da aplicação.
+
+Essa decisão melhora a confiabilidade do projeto e ajuda a evitar regressões em futuras evoluções.
 
 ### Tailwind CSS para estilização
 
@@ -665,7 +720,6 @@ Principais entregas:
 - Campo de observações no carrinho;
 - Validação de pedido mínimo;
 - Persistência do carrinho com `localStorage`;
-- Testes automatizados com Vitest e Testing Library;
 - Melhorias de acessibilidade;
 - Animações sutis entre seções;
 - Galeria de fotos do ambiente e produtos;
