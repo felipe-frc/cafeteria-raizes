@@ -1,4 +1,4 @@
-# ☕ Cafeteria Colonial
+# ☕ Cafeteria Raízes
 
 ![Frontend CI](https://github.com/felipe-frc/cafeteria-colonial/actions/workflows/frontend-ci.yml/badge.svg)
 ![Vercel](https://img.shields.io/badge/deploy-Vercel-black?logo=vercel)
@@ -8,22 +8,19 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?logo=tailwindcss&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-Aplicação web desenvolvida para uma cafeteria de identidade colonial, com foco em **interface sofisticada**, **cardápio interativo**, **carrinho de pedidos**, **integração com WhatsApp**, **experiência do usuário**, **responsividade**, **organização de código** e **deploy em produção com Vercel**.
+Aplicação web desenvolvida para a **Cafeteria Raízes**, com foco em **interface sofisticada**, **cardápio interativo**, **carrinho de pedidos**, **integração com WhatsApp**, **experiência do usuário**, **responsividade**, **organização de código** e **deploy em produção com Vercel**.
 
 O projeto foi desenvolvido com **React**, **TypeScript**, **Vite** e **Tailwind CSS**, utilizando uma estrutura limpa, componentizada e preparada para evolução.
 
 A aplicação apresenta uma landing page moderna para a **Cafeteria Raízes**, permitindo que o usuário visualize o menu, adicione produtos ao carrinho, controle quantidades e envie o pedido formatado diretamente pelo WhatsApp.
 
-> **Observação sobre a identidade do projeto:**  
-> O repositório utiliza o nome **Cafeteria Colonial** como nome do projeto, enquanto a interface apresenta a marca fictícia **Cafeteria Raízes**, criada para representar visualmente uma cafeteria artesanal com identidade própria.
-
 ---
 
 ## 🌐 Acesse o Projeto
 
-👉 **Deploy:** [Cafeteria Colonial na Vercel](https://cafeteria-colonial-livid.vercel.app/)
+👉 **Deploy:** [Cafeteria Raízes na Vercel](https://cafeteria-raizes-livid.vercel.app/)
 
-👉 **Repositório:** [github.com/felipe-frc/cafeteria-colonial](https://github.com/felipe-frc/cafeteria-colonial)
+👉 **Repositório:** [Acessar no GitHub](https://github.com/felipe-frc/cafeteria-raizes)
 
 > A aplicação está hospedada na Vercel como projeto front-end estático. O build de produção é gerado com Vite e publicado a partir da pasta `dist`.
 
@@ -165,7 +162,7 @@ Este projeto foi desenvolvido com o objetivo de praticar e demonstrar conhecimen
 O projeto utiliza uma estrutura front-end organizada por responsabilidade, separando componentes visuais, dados estáticos, hooks, utilitários, assets públicos e configurações de build/deploy.
 
 ```txt
-cafeteria-colonial/
+projeto/
 │
 ├── client/
 │   ├── index.html
@@ -187,7 +184,6 @@ cafeteria-colonial/
 │   │   │   │   ├── cafe-gelado.png
 │   │   │   │   ├── cappuccino-tradicional.png
 │   │   │   │   ├── croissant.png
-│   │   │   │   ├── espresso-colonial.png
 │   │   │   │   ├── macchiato-classico.png
 │   │   │   │   └── pao-de-queijo.png
 │   │   │   │
@@ -363,7 +359,7 @@ dist/
 
 Visão geral da landing page com hero, seção institucional, menu, carrinho, depoimentos e localização.
 
-![Interface completa da Cafeteria Colonial](client/public/images/telas/interface.png)
+![Interface completa da Cafeteria Raízes](client/public/images/telas/interface.png)
 
 ---
 
@@ -371,7 +367,7 @@ Visão geral da landing page com hero, seção institucional, menu, carrinho, de
 
 Hero section com identidade visual da cafeteria, navegação superior e chamada para contato.
 
-![Página inicial da Cafeteria Colonial](client/public/images/telas/home.png)
+![Página inicial da Cafeteria Raízes](client/public/images/telas/home.png)
 
 ---
 
@@ -698,13 +694,13 @@ Principais melhorias:
 
 ### [v1.0.0 — Primeira versão estável](https://github.com/felipe-frc/cafeteria-colonial/releases/tag/v1.0.0)
 
-Primeira versão oficial do projeto Cafeteria Colonial.
+Primeira versão oficial do projeto Cafeteria Raízes.
 
 Principais entregas:
 
 - Layout institucional completo da cafeteria;
 - Hero section com identidade visual;
-- Proposta visual colonial sofisticada;
+- Proposta visual sofisticada da marca;
 - Menu dividido entre bebidas e alimentos;
 - Seção de depoimentos;
 - Seção de localização com mapa incorporado;
