@@ -16,7 +16,6 @@ type MenuSectionProps = {
 
 export function MenuSection({ onAddToCart, onCartOpen }: MenuSectionProps) {
   const [activeCategory, setActiveCategory] = useState<MenuCategory>("bebidas");
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   function handleAddItem(item: MenuItem) {
     onAddToCart(item);
@@ -56,8 +55,6 @@ export function MenuSection({ onAddToCart, onCartOpen }: MenuSectionProps) {
           {menuItems[activeCategory].map((item) => (
             <article
               key={item.id}
-              onMouseEnter={() => setHoveredItem(item.id)}
-              onMouseLeave={() => setHoveredItem(null)}
               className="group flex min-h-[430px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-5 shadow-2xl shadow-black/10 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1 hover:bg-white/[0.07]"
             >
               <div className="relative h-48 overflow-hidden rounded-2xl shadow-2xl">
@@ -66,22 +63,12 @@ export function MenuSection({ onAddToCart, onCartOpen }: MenuSectionProps) {
                   alt={item.title}
                   width="480"
                   height="320"
-                  className={`h-full w-full object-cover transition-transform duration-500 ${
-                    hoveredItem === item.id ? "scale-110" : "scale-100"
-                  }`}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
 
-                <div
-                  className={`absolute inset-0 bg-black/45 transition-opacity duration-300 ${
-                    hoveredItem === item.id ? "opacity-100" : "opacity-0"
-                  }`}
-                />
+                <div className="absolute inset-0 bg-black/45 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-                <div
-                  className={`absolute inset-0 flex items-center justify-center px-6 text-center transition-opacity duration-300 ${
-                    hoveredItem === item.id ? "opacity-100" : "opacity-0"
-                  }`}
-                >
+                <div className="absolute inset-0 flex items-center justify-center px-6 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="text-sm font-light uppercase tracking-[0.25em] text-white">
                     Adicionar ao pedido
                   </span>
