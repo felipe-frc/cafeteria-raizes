@@ -8,7 +8,7 @@ describe("MenuSection", () => {
     render(<MenuSection onAddToCart={vi.fn()} onCartOpen={vi.fn()} />);
 
     expect(screen.getByText(/Nosso Menu/i)).toBeInTheDocument();
-    expect(screen.getByText(/Espresso Colonial/i)).toBeInTheDocument();
+    expect(screen.getByText(/Espresso da Casa/i)).toBeInTheDocument();
     expect(screen.getByText(/Cappuccino Tradicional/i)).toBeInTheDocument();
   });
 

@@ -13,8 +13,8 @@ export type MenuItem = {
 export const menuItems: Record<MenuCategory, MenuItem[]> = {
   bebidas: [
     {
-      id: "espresso-colonial",
-      title: "Espresso Colonial",
+      id: "espresso-da-casa",
+      title: "Espresso da Casa",
       desc: "Intenso e encorpado",
       price: "R$ 8,00",
       priceCents: 800,
