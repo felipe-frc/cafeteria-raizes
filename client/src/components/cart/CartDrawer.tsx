@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useId, useRef } from "react";
 import { Minus, Plus, ShoppingBag, Trash2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { CartItem } from "@/hooks/useCart";
@@ -16,6 +16,15 @@ type CartDrawerProps = {
   onClear: () => void;
 };
 
+const FOCUSABLE_SELECTORS = [
+  "a[href]",
+  "button:not([disabled])",
+  "textarea:not([disabled])",
+  "input:not([disabled])",
+  "select:not([disabled])",
+  "[tabindex]:not([tabindex='-1'])",
+].join(",");
+
 export function CartDrawer({
   isOpen,
   items,
@@ -29,11 +38,17 @@ export function CartDrawer({
   const hasItems = items.length > 0;
   const whatsappUrl = createWhatsappOrderUrl(items, totalPrice);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const drawerRef = useRef<HTMLElement>(null);
+  const previousFocusedElementRef = useRef<HTMLElement | null>(null);
+  const titleId = useId();
 
   useEffect(() => {
     if (!isOpen) {
+      previousFocusedElementRef.current?.focus();
       return;
     }
+
+    previousFocusedElementRef.current = document.activeElement as HTMLElement | null;
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -42,6 +57,30 @@ export function CartDrawer({
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
         onClose();
+        return;
+      }
+
+      if (event.key !== "Tab" || !drawerRef.current) {
+        return;
+      }
+
+      const focusableElements = Array.from(
+        drawerRef.current.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTORS)
+      );
+
+      if (focusableElements.length === 0) {
+        return;
+      }
+
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
       }
     }
 
@@ -64,9 +103,10 @@ export function CartDrawer({
       />
 
       <aside
+        ref={drawerRef}
         role="dialog"
         aria-modal="true"
-        aria-labelledby="cart-drawer-title"
+        aria-labelledby={titleId}
         tabIndex={-1}
         className={`fixed bottom-0 right-0 top-0 z-[70] flex w-full max-w-md flex-col border-l border-amber-700/20 bg-stone-950 shadow-2xl shadow-black/40 transition-transform duration-300 sm:rounded-l-3xl ${
           isOpen ? "translate-x-0" : "translate-x-full"
@@ -76,7 +116,7 @@ export function CartDrawer({
         <header className="flex items-center justify-between border-b border-white/10 px-6 py-5">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-amber-500">Pedido</p>
-            <h2 id="cart-drawer-title" className="mt-1 text-2xl font-bold text-white">
+            <h2 id={titleId} className="mt-1 text-2xl font-bold text-white">
               Seu carrinho
             </h2>
           </div>
@@ -175,7 +215,9 @@ export function CartDrawer({
         <footer className="border-t border-white/10 bg-stone-950 px-6 py-5">
           <div className="mb-4 flex items-center justify-between text-white">
             <span className="text-sm uppercase tracking-[0.25em] text-white/50">Total</span>
-            <strong className="text-2xl text-amber-500">{formatCurrency(totalPrice)}</strong>
+            <strong aria-live="polite" className="text-2xl text-amber-500">
+              {formatCurrency(totalPrice)}
+            </strong>
           </div>
 
           <div className="grid gap-3">

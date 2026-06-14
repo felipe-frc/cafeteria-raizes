@@ -3,10 +3,22 @@ import { Star } from "lucide-react";
 import { reviews } from "@/data/reviews";
 import { SectionTitle } from "./SectionTitle";
 
+function prefersReducedMotion() {
+  if (typeof window === "undefined" || typeof window.matchMedia !== "function") {
+    return false;
+  }
+
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
 export function ReviewsSection() {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
 
   useEffect(() => {
+    if (prefersReducedMotion()) {
+      return;
+    }
+
     const interval = window.setInterval(() => {
       setCurrentReviewIndex((previousIndex) => (previousIndex + 1) % reviews.length);
     }, 5000);
@@ -39,9 +51,9 @@ export function ReviewsSection() {
                 ))}
               </div>
 
-              <p className="mb-6 text-lg font-light leading-relaxed text-white/85">
+              <blockquote className="mb-6 text-lg font-light leading-relaxed text-white/85">
                 “{review.text}”
-              </p>
+              </blockquote>
               <p className="font-bold text-amber-600">{review.name}</p>
             </article>
           ))}
@@ -51,6 +63,7 @@ export function ReviewsSection() {
           {reviews.map((review, index) => (
             <button
               key={review.name}
+              type="button"
               onClick={() => setCurrentReviewIndex(index)}
               className={`h-3 rounded-full transition-all duration-300 ${
                 index === currentReviewIndex
