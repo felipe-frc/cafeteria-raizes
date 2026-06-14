@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Minus, Plus, ShoppingBag, Trash2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { CartItem } from "@/hooks/useCart";
@@ -27,6 +28,30 @@ export function CartDrawer({
 }: CartDrawerProps) {
   const hasItems = items.length > 0;
   const whatsappUrl = createWhatsappOrderUrl(items, totalPrice);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, onClose]);
 
   return (
     <>
@@ -39,19 +64,25 @@ export function CartDrawer({
       />
 
       <aside
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cart-drawer-title"
+        tabIndex={-1}
         className={`fixed bottom-0 right-0 top-0 z-[70] flex w-full max-w-md flex-col border-l border-amber-700/20 bg-stone-950 shadow-2xl shadow-black/40 transition-transform duration-300 sm:rounded-l-3xl ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
-        aria-label="Carrinho de pedidos"
         aria-hidden={!isOpen}
       >
         <header className="flex items-center justify-between border-b border-white/10 px-6 py-5">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-amber-500">Pedido</p>
-            <h2 className="mt-1 text-2xl font-bold text-white">Seu carrinho</h2>
+            <h2 id="cart-drawer-title" className="mt-1 text-2xl font-bold text-white">
+              Seu carrinho
+            </h2>
           </div>
 
           <button
+            ref={closeButtonRef}
             type="button"
             onClick={onClose}
             className="rounded-full border border-white/10 p-2 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
@@ -148,24 +179,17 @@ export function CartDrawer({
           </div>
 
           <div className="grid gap-3">
-            <Button
-              asChild
-              className="h-12 rounded-2xl bg-green-700 text-white hover:bg-green-800"
-              aria-disabled={!hasItems}
-            >
-              <a
-                href={hasItems ? whatsappUrl : undefined}
-                target="_blank"
-                rel="noreferrer"
-                onClick={(event) => {
-                  if (!hasItems) {
-                    event.preventDefault();
-                  }
-                }}
-              >
+            {hasItems ? (
+              <Button asChild className="h-12 rounded-2xl bg-green-700 text-white hover:bg-green-800">
+                <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                  Enviar pedido pelo WhatsApp
+                </a>
+              </Button>
+            ) : (
+              <Button disabled className="h-12 rounded-2xl bg-green-700 text-white">
                 Enviar pedido pelo WhatsApp
-              </a>
-            </Button>
+              </Button>
+            )}
 
             {hasItems && (
               <button
