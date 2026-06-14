@@ -48,17 +48,17 @@
   --primary-foreground: #f9f6f0;
   --sidebar-primary: #5d3a1a;
   --sidebar-primary-foreground: #f9f6f0;
-  
+
   /* Cores de Gráfico */
   --chart-1: #8b6f47;
   --chart-2: #4d2e19;
   --chart-3: #3d1f10;
   --chart-4: #f5e6d3;
   --chart-5: #a89a8a;
-  
+
   /* Espaçamento */
   --radius: 0.75rem;
-  
+
   /* Background e Foreground */
   --background: #faf8f5; /* Creme muito claro */
   --foreground: #2d1810; /* Marrom muito escuro */
@@ -66,7 +66,7 @@
   --card-foreground: #2d1810;
   --popover: #ffffff;
   --popover-foreground: #2d1810;
-  
+
   /* Secundário */
   --secondary: #f5e6d3; /* Creme claro */
   --secondary-foreground: #2d1810;
@@ -74,16 +74,16 @@
   --muted-foreground: #6b4423;
   --accent: #9b7653; /* Marrom café médio - mais sofisticado */
   --accent-foreground: #ffffff;
-  
+
   /* Destrutivo */
   --destructive: #c85a3a;
   --destructive-foreground: #ffffff;
-  
+
   /* Borders e Inputs */
   --border: #e8dcc8;
   --input: #e8dcc8;
   --ring: #9b7653;
-  
+
   /* Sidebar */
   --sidebar: #ffffff;
   --sidebar-foreground: #2d1810;
@@ -133,39 +133,44 @@
   * {
     @apply border-border outline-ring/50;
   }
-  
+
   body {
     @apply bg-background text-foreground;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", serif;
     font-weight: 700;
     letter-spacing: -0.02em;
   }
-  
+
   h1 {
     @apply text-5xl md:text-6xl lg:text-7xl;
   }
-  
+
   h2 {
     @apply text-4xl md:text-5xl;
   }
-  
+
   h3 {
     @apply text-3xl md:text-4xl;
   }
-  
+
   h4 {
     @apply text-2xl md:text-3xl;
   }
-  
+
   p {
     @apply text-lg leading-relaxed;
     font-weight: 300;
   }
-  
+
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -179,123 +184,10 @@
   }
 }
 
-@layer components {
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-fadeIn {
-    animation: fadeIn 0.5s ease-in-out;
-  }
-  .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      max-width: 1280px;
-    }
-  }
-}
-
-/* Tipografia Customizada */
-.font-playfair {
-  font-family: 'Playfair Display', serif;
-}
-
-.font-lato {
-  font-family: 'Lato', sans-serif;
-}
-
-/* Animações Sofisticadas */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 /* Scroll Smooth */
 html {
   scroll-behavior: smooth;
 }
-
-/* Efeito de Parallax Suave */
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 
 /* Background decorativo aplicado da seção Nossa Essência até Visite-nos */
 .site-textured-background {
@@ -303,16 +195,16 @@ html {
   isolation: isolate;
   background-image:
     radial-gradient(circle at 18% 10%, rgba(180, 108, 24, 0.14), transparent 28rem),
-    radial-gradient(circle at 82% 42%, rgba(180, 108, 24, 0.10), transparent 30rem),
+    radial-gradient(circle at 82% 42%, rgba(180, 108, 24, 0.1), transparent 30rem),
     linear-gradient(180deg, rgba(33, 31, 27, 0.88), rgba(24, 22, 20, 0.91)),
-    url('/images/background-home.webp');
+    url("/images/background-home.webp");
   background-position: center top, center center, center center, center top;
   background-repeat: no-repeat, no-repeat, no-repeat, repeat;
   background-size: 100% 100%, 100% 100%, 100% 100%, 760px auto;
 }
 
 .site-textured-background::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -327,7 +219,7 @@ html {
 }
 
 .site-textured-background section + section::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 0;
@@ -361,11 +253,6 @@ html {
   background: #5d3a1a;
 }
 
-/* Animações de Fade In */
-.animate-fade-in {
-  animation: fadeInDown 0.8s ease-out;
-}
-
 /* Links */
 a {
   color: #9b7653;
@@ -388,7 +275,7 @@ button:focus-visible {
 input,
 textarea,
 select {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   border-color: #e8dcc8;
   transition: border-color 0.3s ease;
 }
