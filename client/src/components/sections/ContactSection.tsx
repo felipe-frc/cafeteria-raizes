@@ -3,12 +3,16 @@ import { contactInfo } from "@/data/contact";
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "./SectionTitle";
 
+const mapLocationUrl = "https://maps.google.com/?q=Patrocínio%20MG";
+const embeddedMapUrl =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d552737.0817473176!2d-47.094663697587215!3d-19.00589641062706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94afba88e5ce6e53%3A0x6131553223c88567!2sPatroc%C3%ADnio%20-%20MG%2C%2038740-000!5e0!3m2!1spt-BR!2sbr!4v1776968163894!5m2!1spt-BR!2sbr";
+
 const contactItems = [
   {
     icon: MapPin,
     label: "Endereço",
     value: "Rua das Flores, 123 - Centro, Patrocínio - MG",
-    href: "https://maps.google.com/?q=Patrocínio%20MG",
+    href: mapLocationUrl,
   },
   {
     icon: Phone,
@@ -61,7 +65,7 @@ export function ContactSection() {
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="rounded-2xl px-6">
-                  <a href="https://maps.google.com/?q=Patrocínio%20MG" target="_blank" rel="noreferrer">
+                  <a href={mapLocationUrl} target="_blank" rel="noreferrer">
                     <MapPin className="size-4" />
                     Abrir no mapa
                   </a>
@@ -71,7 +75,10 @@ export function ContactSection() {
 
             <div className="space-y-5">
               {contactItems.map((item) => (
-                <div key={item.label} className="group flex gap-6 rounded-2xl border border-white/8 bg-white/[0.03] p-5">
+                <div
+                  key={item.label}
+                  className="group flex gap-6 rounded-2xl border border-white/8 bg-white/[0.03] p-5"
+                >
                   <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-amber-600/20 transition-all group-hover:bg-amber-600/40">
                     <item.icon className="h-6 w-6 text-amber-600" />
                   </div>
@@ -100,7 +107,7 @@ export function ContactSection() {
 
           <div className="h-96 overflow-hidden rounded-2xl shadow-2xl">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d552737.0817473176!2d-47.094663697587215!3d-19.00589641062706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94afba88e5ce6e53%3A0x6131553223c88567!2sPatroc%C3%ADnio%20-%20MG%2C%2038740-000!5e0!3m2!1spt-BR!2sbr!4v1776968163894!5m2!1spt-BR!2sbr"
+              src={embeddedMapUrl}
               width="100%"
               height="100%"
               style={{ border: 0 }}

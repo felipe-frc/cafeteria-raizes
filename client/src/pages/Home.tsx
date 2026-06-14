@@ -22,16 +22,24 @@ export default function Home() {
     clearCart,
   } = useCart();
 
+  function openCart() {
+    setIsCartOpen(true);
+  }
+
+  function closeCart() {
+    setIsCartOpen(false);
+  }
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-stone-950 text-white">
-      <Header cartItemsCount={totalItems} onCartOpen={() => setIsCartOpen(true)} />
+      <Header cartItemsCount={totalItems} onCartOpen={openCart} />
 
       <main>
         <HeroSection />
 
         <div className="site-textured-background">
           <AboutSection />
-          <MenuSection onAddToCart={addItem} onCartOpen={() => setIsCartOpen(true)} />
+          <MenuSection onAddToCart={addItem} onCartOpen={openCart} />
           <ReviewsSection />
           <ContactSection />
         </div>
@@ -43,7 +51,7 @@ export default function Home() {
         isOpen={isCartOpen}
         items={items}
         totalPrice={totalPrice}
-        onClose={() => setIsCartOpen(false)}
+        onClose={closeCart}
         onIncrease={increaseQuantity}
         onDecrease={decreaseQuantity}
         onRemove={removeItem}
