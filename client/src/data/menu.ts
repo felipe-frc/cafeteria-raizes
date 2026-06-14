@@ -18,7 +18,7 @@ export const menuItems: Record<MenuCategory, MenuItem[]> = {
       desc: "Intenso e encorpado",
       price: "R$ 8,00",
       priceCents: 800,
-      image: "/images/menu/espresso-colonial.png",
+      image: "/images/menu/espresso-da-casa.png",
       category: "bebidas",
     },
     {
