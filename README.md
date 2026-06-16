@@ -1,6 +1,6 @@
 # ☕ Cafeteria Raízes
 
-![Frontend CI](https://github.com/felipe-frc/cafeteria-colonial/actions/workflows/frontend-ci.yml/badge.svg)
+![Frontend CI](https://github.com/felipe-frc/cafeteria-raizes/actions/workflows/frontend-ci.yml/badge.svg)
 ![Vercel](https://img.shields.io/badge/deploy-Vercel-black?logo=vercel)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
@@ -75,7 +75,7 @@ client/
 
 ```bash
 git clone https://github.com/felipe-frc/cafeteria-raizes.git
-cd cafeteria-colonial
+cd cafeteria-raizes
 npm install
 ```
 
@@ -85,7 +85,7 @@ npm install
 npm run dev
 ```
 
-Aplicação disponível em `http://localhost:5173`.
+Aplicação disponível em `http://localhost:3000`.
 
 ### Qualidade
 
