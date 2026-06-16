@@ -6,8 +6,33 @@ export type CartItem = MenuItem & {
 };
 
 const CART_STORAGE_KEY = "cafeteria-raizes:cart";
+const VALID_CATEGORIES = new Set<MenuItem["category"]>(["bebidas", "quitandas"]);
 
-function readStoredCart() {
+function isValidCartItem(value: unknown): value is CartItem {
+  if (typeof value !== "object" || value === null) {
+    return false;
+  }
+
+  const item = value as Partial<CartItem>;
+
+  return (
+    typeof item.id === "string" &&
+    typeof item.title === "string" &&
+    typeof item.desc === "string" &&
+    typeof item.price === "string" &&
+    typeof item.priceCents === "number" &&
+    Number.isFinite(item.priceCents) &&
+    item.priceCents >= 0 &&
+    typeof item.image === "string" &&
+    typeof item.category === "string" &&
+    VALID_CATEGORIES.has(item.category as MenuItem["category"]) &&
+    typeof item.quantity === "number" &&
+    Number.isInteger(item.quantity) &&
+    item.quantity > 0
+  );
+}
+
+function readStoredCart(): CartItem[] {
   if (typeof window === "undefined") {
     return [];
   }
@@ -20,7 +45,7 @@ function readStoredCart() {
     }
 
     const parsedCart = JSON.parse(storedCart);
-    return Array.isArray(parsedCart) ? parsedCart : [];
+    return Array.isArray(parsedCart) ? parsedCart.filter(isValidCartItem) : [];
   } catch {
     return [];
   }

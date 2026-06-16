@@ -30,4 +30,20 @@ describe("useCart", () => {
     expect(result.current.totalItems).toBe(2);
     expect(result.current.totalPrice).toBe(menuItems.quitandas[0].priceCents * 2);
   });
+
+  it("ignora itens inválidos persistidos no localStorage", () => {
+    window.localStorage.setItem(
+      "cafeteria-raizes:cart",
+      JSON.stringify([
+        { ...menuItems.bebidas[0], quantity: 1 },
+        { id: "invalido", title: "Sem quantidade", quantity: 0 },
+        "valor solto",
+      ])
+    );
+
+    const { result } = renderHook(() => useCart());
+
+    expect(result.current.items).toEqual([{ ...menuItems.bebidas[0], quantity: 1 }]);
+    expect(result.current.totalItems).toBe(1);
+  });
 });
