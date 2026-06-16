@@ -60,7 +60,7 @@ export const menuItems: Record<MenuCategory, MenuItem[]> = {
     {
       id: "cafe-gelado",
       title: "Café Gelado",
-      desc: "Refrescante sofisticado",
+      desc: "Refrescante e sofisticado",
       price: "R$ 10,00",
       priceCents: 1000,
       image: "/images/menu/cafe-gelado.png",
@@ -107,7 +107,7 @@ export const menuItems: Record<MenuCategory, MenuItem[]> = {
     {
       id: "biscoito-de-polvilho",
       title: "Biscoito de Polvilho",
-      desc: "Crocante leve",
+      desc: "Crocante e leve",
       price: "R$ 5,00",
       priceCents: 500,
       image: "/images/menu/biscoito-de-polvilho.png",

@@ -36,13 +36,12 @@ export function AboutSection() {
 
             <div className="mt-8 space-y-6 text-lg font-light leading-relaxed text-white/85">
               <p>
-                A Cafeteria Raízes não é apenas um lugar. É um espaço pensado para
-                acolher, inspirar e transformar cada pausa em uma experiência especial.
+                A Cafeteria Raízes não é apenas um lugar. É um espaço pensado para acolher,
+                inspirar e transformar cada pausa em uma experiência especial.
               </p>
               <p>
-                Desde 1989, cultivamos a excelência em cada grão, em cada receita e em
-                cada momento compartilhado. Nossa missão é servir sabor, tradição e
-                aconchego.
+                Desde 1989, cultivamos excelência em cada grão, em cada receita e em cada
+                momento compartilhado. Nossa missão é servir sabor, tradição e aconchego.
               </p>
             </div>
 
