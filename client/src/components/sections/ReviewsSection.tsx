@@ -52,7 +52,7 @@ export function ReviewsSection() {
               </div>
 
               <blockquote className="mb-6 text-lg font-light leading-relaxed text-white/85">
-                “{review.text}”
+                "{review.text}"
               </blockquote>
               <p className="font-bold text-amber-600">{review.name}</p>
             </article>
